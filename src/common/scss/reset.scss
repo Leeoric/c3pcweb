@@ -1,0 +1,106 @@
+html, body {
+  height: 100%;
+}
+
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+a:hover {
+  color: #7e7e7e;
+  text-decoration: none;
+}
+
+i, em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: 0;
+  font-family: "Microsoft YaHei", "SimSun", "SimHei", "Arial", sans-serif;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.current-page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #e80313;
+}
+
+.nav-left .current-page a {
+  color: #ffffff;
+}

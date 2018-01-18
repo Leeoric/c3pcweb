@@ -1,9 +1,22 @@
 @import "variable.scss";
 
 body, html {
-  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   background: $color-background;
   color: $color-text;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: 16px;
+  background: #fff;
+  min-width: 1200px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
 }

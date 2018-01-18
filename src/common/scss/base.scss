@@ -16,7 +16,68 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+a:hover {
+  color: #7e7e7e;
+  text-decoration: none;
+}
+
 .container {
   width: 1110px;
   margin: 0 auto;
+}
+
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.current-page {
+  color: #ffffff;
+  box-sizing: border-box;
+  background-color: #e80313;
+}
+
+.nav-left .current-page a {
+  color: #ffffff;
 }

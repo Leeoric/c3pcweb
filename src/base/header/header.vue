@@ -3,15 +3,14 @@
     <div class="container clearfix">
       <div class="nav-left fl">
         <ul class="clearfix">
-          <li class="fl current-page"><a href="index.html">最新会议</a></li>
-          <li class="fl"><a href="hisconf.html">历史会议</a></li>
-          <li class="fl"><a href="confinfo.html">会议资讯</a></li>
-          <li class="fl"><a href="per.html">个人中心</a></li>
+          <li class="fl" v-for="(item) in navList" :key="item.name" :class="{'current-page':$route.path==='/'+item.path}" @click="_changeCurrentColor(item)">
+            <span>{{item.name}}</span>
+          </li>
         </ul>
       </div>
       <div class="nav-right fr clearfix">
         <div class="search fl" id="navSearch">
-          <input type="text" placeholder="请输入关键字查询更多会议">
+          <input type="text" placeholder="请输入关键字查询会议">
           <span></span>
         </div>
         <div class="assistant fl">
@@ -27,7 +26,39 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
-
+  export default {
+    data () {
+      return {
+        navList: [
+          {
+            name: '最新会议',
+            path: 'newestMeeting'
+          },
+          {
+            name: '历史会议',
+            path: 'historyMeeting'
+          },
+          {
+            name: '会议资讯',
+            path: 'meetingInfo'
+          },
+          {
+            name: '个人中心',
+            path: 'personalCenter'
+          }
+        ]
+      }
+    },
+    created () {
+      console.log('当前route.path', this.$route.path)
+    },
+    methods: {
+      _changeCurrentColor (item) {
+        console.log('点击了item:---', item)
+        this.$router.push({path: item.path})
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">
@@ -41,12 +72,11 @@
     box-sizing: border-box;
     .nav-left ul li {
       text-align: center;
-      a {
+      span {
         display: inline-block;
         width: 120px;
         height: 45px;
         line-height: 45px;
-        color: #000;
         transition: all .5s;
         :hover {
           color: #dfdfdf;
